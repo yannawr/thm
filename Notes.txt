@@ -1,0 +1,4 @@
+# Notes
+
+- Dirty C0w
+- SUID and GUID
