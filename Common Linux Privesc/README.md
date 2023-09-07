@@ -1,7 +1,7 @@
 # COMMON LINUX PRIVESC
 
 ```
-export IP=10.10.228.161
+export IP=10.10.8.224
 ```
 
 ```
