@@ -1,3 +1,3 @@
 # thm
 
-Some anotations about THM rooms
+Some losely anotations about THM rooms
