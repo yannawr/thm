@@ -1,0 +1,99 @@
+# Nmap 7.94 scan initiated Tue Sep 12 14:49:01 2023 as: nmap -sV -sC -oN nmap.out -vvv 10.10.232.111
+Nmap scan report for 10.10.232.111
+Host is up, received conn-refused (0.32s latency).
+Scanned at 2023-09-12 14:49:05 -03 for 121s
+Not shown: 988 closed tcp ports (conn-refused)
+PORT      STATE SERVICE            REASON  VERSION
+80/tcp    open  http               syn-ack Microsoft IIS httpd 8.5
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-title: Site doesn't have a title (text/html).
+|_http-server-header: Microsoft-IIS/8.5
+135/tcp   open  msrpc              syn-ack Microsoft Windows RPC
+139/tcp   open  netbios-ssn        syn-ack Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds       syn-ack Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+3389/tcp  open  ssl/ms-wbt-server? syn-ack
+| ssl-cert: Subject: commonName=steelmountain
+| Issuer: commonName=steelmountain
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2023-09-11T17:44:19
+| Not valid after:  2024-03-12T17:44:19
+| MD5:   5d59:4362:d967:b19a:8721:54c0:f403:72ef
+| SHA-1: 0adb:f9f5:76d8:e631:ee18:320c:b5ac:14a5:cced:e31b
+| -----BEGIN CERTIFICATE-----
+| MIIC3jCCAcagAwIBAgIQS1UqSXIQVptLuE/cPNzrlzANBgkqhkiG9w0BAQUFADAY
+| MRYwFAYDVQQDEw1zdGVlbG1vdW50YWluMB4XDTIzMDkxMTE3NDQxOVoXDTI0MDMx
+| MjE3NDQxOVowGDEWMBQGA1UEAxMNc3RlZWxtb3VudGFpbjCCASIwDQYJKoZIhvcN
+| AQEBBQADggEPADCCAQoCggEBAPJFmYPpfPdDLuO62GSRF0WrZVieLk3UJgr1Cz7b
+| oCTx7cfSC6uIcFzoQRmH9ZrhrFpZiEgKvC4B04W69GgSERFVx/coLyNsVMUqSOWB
+| BD1dqpLri0h2/UzkoMwLCE9CkPzK30NtQjgRn1mfZbnaYn/9rdZIyB0sC2XLvJVX
+| L4XYIcxreJsgzOAp6VTyVrXePS5+p3YTi2Z118CVmkpL0zr9mBEIV1b+oo86ySfT
+| sQQSHiMHf2MFDiIjf+1lxlI1GnPy3tmOqNta2/qWKvKpKLCDsCyXahdutD4Bv+TV
+| YIo3kwvVijL6f1otb6/bLoZGmXqr7JRmaYe5WHhGTp8ede0CAwEAAaMkMCIwEwYD
+| VR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgQwMA0GCSqGSIb3DQEBBQUAA4IB
+| AQBGKH0/Zx5sY8AKVg0Nh6qt+NhxgciKWQCSG7qB1CsuU7hNw64+sxLtdmgIGFeG
+| OBdz3pS7HtHZsww4whPCpUJlZHpCBaliFdzd+9c9k4cLSqxxa5q4v0ovwKmOn7Cg
+| TsebqaWhWeHwwOiZIierUM4AznEePZKvx4w1dEc08cD3XLSl2026iYyOPzswppSW
+| 9YVVHvKQa6Kg/zi3UfewU6kTJhHaLbWl7uyf1GIDDlYmwNLVaPR025aZ9ePd8+Tc
+| 3kxJny2L/3y21VFq5ZpecEA5hg+MJxGFibAWgkYLPplxzzPytbpjWDFbfHUq5vhI
+| XZJDhxjLQGMxKlIGqR9hiPAo
+|_-----END CERTIFICATE-----
+|_ssl-date: 2023-09-12T17:51:04+00:00; -1s from scanner time.
+| rdp-ntlm-info: 
+|   Target_Name: STEELMOUNTAIN
+|   NetBIOS_Domain_Name: STEELMOUNTAIN
+|   NetBIOS_Computer_Name: STEELMOUNTAIN
+|   DNS_Domain_Name: steelmountain
+|   DNS_Computer_Name: steelmountain
+|   Product_Version: 6.3.9600
+|_  System_Time: 2023-09-12T17:50:57+00:00
+8080/tcp  open  http               syn-ack HttpFileServer httpd 2.3
+|_http-title: HFS /
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-favicon: Unknown favicon MD5: 759792EDD4EF8E6BC2D1877D27153CB1
+|_http-server-header: HFS 2.3
+49152/tcp open  msrpc              syn-ack Microsoft Windows RPC
+49153/tcp open  msrpc              syn-ack Microsoft Windows RPC
+49154/tcp open  msrpc              syn-ack Microsoft Windows RPC
+49155/tcp open  msrpc              syn-ack Microsoft Windows RPC
+49156/tcp open  msrpc              syn-ack Microsoft Windows RPC
+49163/tcp open  msrpc              syn-ack Microsoft Windows RPC
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   3:0:2: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2023-09-12T17:50:57
+|_  start_date: 2023-09-12T17:44:10
+| nbstat: NetBIOS name: STEELMOUNTAIN, NetBIOS user: <unknown>, NetBIOS MAC: 02:4a:c2:d0:62:c3 (unknown)
+| Names:
+|   STEELMOUNTAIN<20>    Flags: <unique><active>
+|   STEELMOUNTAIN<00>    Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+| Statistics:
+|   02:4a:c2:d0:62:c3:00:00:00:00:00:00:00:00:00:00:00
+|   00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+|_  00:00:00:00:00:00:00:00:00:00:00:00:00:00
+|_clock-skew: mean: -1s, deviation: 0s, median: -1s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 52389/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 10919/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 21541/udp): CLEAN (Failed to receive data)
+|   Check 4 (port 47712/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Sep 12 14:51:06 2023 -- 1 IP address (1 host up) scanned in 124.30 seconds
